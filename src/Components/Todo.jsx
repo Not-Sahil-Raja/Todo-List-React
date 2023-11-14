@@ -11,7 +11,7 @@ const Todo = () => {
   return (
     <>
       <form className=" flex items-center justify-center">
-        <div className=" flex items-center border-2 m-2 py-2 px-3 rounded-md border-lightbrown">
+        <div className=" flex items-center border-2 m-2 py-2 px-3 rounded-md border-lightbrown shadow-xl">
           <FontAwesomeIcon
             icon={faGripLines}
             style={{ color: "#7F675B" }}
@@ -19,7 +19,7 @@ const Todo = () => {
           />
           <input
             placeholder="Add a Task"
-            className=" bg-transparent  ml-4 active:appearance-none focus:ring-transparent focus:border-transparent focus:outline-none"
+            className=" bg-transparent  ml-4 active:appearance-none focus:ring-transparent focus:border-transparent focus:outline-none font-semibold text-slate-800 placeholder:font-semibold placeholder:text-slate-700"
             type="text"
             onChange={(e) => {
               setToDo({ name: e.target.value, undone: true });
@@ -41,7 +41,7 @@ const Todo = () => {
           New Task +
         </button>
       </form>
-      <div className=" bg-ashgray w-2/6 mx-auto px-2 py-0.5 my-12 rounded-3xl h-56 overflow-y-scroll">
+      <div className=" bg-ashgray w-2/6 mx-auto px-2 py-0.5 my-12 rounded-3xl h-40vh overflow-y-scroll scrollbar-hide shadow-xl">
         {toDos.map((item) => (
           <TodoItem
             key={item.name}

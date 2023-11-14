@@ -17,7 +17,11 @@ const TodoItem = ({ item, toDos, setToDos, toDo }) => {
 
   return (
     <>
-      <div className=" flex items-center justify-around m-8 border-soild border-yellow-200 border-2 w-4/12 mx-auto px-3 py-3 rounded">
+      <div
+        className={` flex items-center justify-around m-8 border-soild w-3/4 mx-auto px-3 py-3 rounded shadow-xl bg-ashgraylight border-solid border-2 font-semibold ${
+          item.undone ? "" : "opacity-[.75]"
+        } `}
+      >
         <p
           className={`cursor-pointer ${
             item.undone ? " no-underline" : " line-through"
@@ -27,7 +31,7 @@ const TodoItem = ({ item, toDos, setToDos, toDo }) => {
           {item.name}
         </p>{" "}
         <button
-          className=" bg-red-500 text-white py-1 px-4 rounded-3xl font-bold"
+          className=" bg-red-500 text-white py-1 px-4 rounded-3xl font-bold hover:bg-red-700 transition-all active:scale-[.8]"
           onClick={() => deleteItem(item)}
         >
           <FontAwesomeIcon icon={faTrashCan} />
