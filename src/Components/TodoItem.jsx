@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTrashCan,
+  faCheck,
+  faSquare,
+  faCircleNotch,
+} from "@fortawesome/free-solid-svg-icons";
 
 const TodoItem = ({ item, toDos, setToDos, toDo }) => {
   let deleteItem = (item) => {
@@ -14,14 +19,19 @@ const TodoItem = ({ item, toDos, setToDos, toDo }) => {
 
     setToDos(newList);
   };
+  let icon;
+  item.undone
+    ? (icon = <FontAwesomeIcon icon={faCircleNotch} />)
+    : (icon = <FontAwesomeIcon icon={faCheck} />);
 
   return (
     <>
       <div
         className={` flex items-center justify-around m-8 border-soild w-3/4 mx-auto px-3 py-3 rounded shadow-xl bg-ashgraylight border-solid border-2 font-semibold ${
-          item.undone ? "" : "opacity-[.75]"
+          item.undone ? "" : "opacity-[.55]"
         } `}
       >
+        {icon}
         <p
           className={`cursor-pointer ${
             item.undone ? " no-underline" : " line-through"

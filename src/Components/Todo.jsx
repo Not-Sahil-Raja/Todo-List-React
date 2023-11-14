@@ -30,7 +30,9 @@ const Todo = () => {
         </div>
 
         <button
-          className=" bg-lime-800 text-teal-50 px-6 py-2  rounded font-mono font-bold"
+          className=" ml-2 bg-amber-900 text-teal-50 px-6 py-2 cursor-pointer  rounded font-mono font-bold hover:bg-amber-800 hover:scale-[1.05] transition-all
+           active:scale-[.85] shadow-md
+          "
           disabled={!toDo.name}
           onClick={(e) => {
             e.preventDefault();
