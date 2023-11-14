@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import TodoItem from "./TodoItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGripLines } from "@fortawesome/free-solid-svg-icons";
 
 const Todo = () => {
   // const [toDo, setToDo] = useState("");
@@ -8,16 +10,25 @@ const Todo = () => {
   const [toDos, setToDos] = useState([]);
   return (
     <>
-      <form>
-        <input
-          placeholder="Add a Task"
-          className=" border-b-2 border-gray-900 px-4 py-2 w-6/12 rounded mr-10"
-          type="text"
-          onChange={(e) => {
-            setToDo({ name: e.target.value, undone: true });
-          }}
-          value={toDo.name}
-        />
+      <form className=" flex items-center justify-center">
+        <div className=" flex items-center border-2 m-2 py-2 px-3 rounded-md border-lightbrown">
+          <FontAwesomeIcon
+            icon={faGripLines}
+            style={{ color: "#7F675B" }}
+            className=""
+          />
+          <input
+            placeholder="Add a Task"
+            className=" bg-transparent  ml-4 active:appearance-none focus:ring-transparent focus:border-transparent focus:outline-none"
+            type="text"
+            onChange={(e) => {
+              setToDo({ name: e.target.value, undone: true });
+            }}
+            value={toDo.name}
+            id="addTasks"
+          />
+        </div>
+
         <button
           className=" bg-lime-800 text-teal-50 px-6 py-2  rounded font-mono font-bold"
           disabled={!toDo.name}
@@ -30,7 +41,7 @@ const Todo = () => {
           New Task +
         </button>
       </form>
-      <div>
+      <div className=" bg-ashgray w-2/6 mx-auto px-2 py-0.5 my-12 rounded-3xl h-56 overflow-y-scroll">
         {toDos.map((item) => (
           <TodoItem
             key={item.name}

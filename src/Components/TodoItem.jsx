@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 const TodoItem = ({ item, toDos, setToDos, toDo }) => {
   let deleteItem = (item) => {
@@ -28,7 +30,7 @@ const TodoItem = ({ item, toDos, setToDos, toDo }) => {
           className=" bg-red-500 text-white py-1 px-4 rounded-3xl font-bold"
           onClick={() => deleteItem(item)}
         >
-          X
+          <FontAwesomeIcon icon={faTrashCan} />
         </button>
       </div>
     </>

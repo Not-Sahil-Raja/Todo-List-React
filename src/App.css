@@ -5,7 +5,8 @@
   text-align: center;
 }
 body {
-  background-color: bisque;
+  background-color: #bfb48f;
+  overflow: hidden;
 }
 /* .logo {
   height: 6em;
