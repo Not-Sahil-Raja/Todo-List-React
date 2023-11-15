@@ -3,11 +3,15 @@ import { useState } from "react";
 import TodoItem from "./TodoItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGripLines } from "@fortawesome/free-solid-svg-icons";
+import DoneCounter from "./DoneCounter";
 
 const Todo = () => {
   // const [toDo, setToDo] = useState("");
   const [toDo, setToDo] = useState({ name: "", undone: true });
   const [toDos, setToDos] = useState([]);
+  let sortedTodos = toDos
+    .slice()
+    .sort((a, b) => Number(b.undone) - Number(a.undone));
   return (
     <>
       <form className=" flex items-center justify-center">
@@ -44,9 +48,9 @@ const Todo = () => {
         </button>
       </form>
       <div className=" bg-ashgray w-2/6 mx-auto px-2 py-0.5 my-12 rounded-3xl h-40vh overflow-y-scroll scrollbar-hide shadow-xl">
-        {toDos.map((item) => (
+        {sortedTodos.map((item, index) => (
           <TodoItem
-            key={item.name}
+            key={item.name + index}
             item={item}
             toDos={toDos}
             setToDos={setToDos}
@@ -54,6 +58,8 @@ const Todo = () => {
           />
         ))}
       </div>
+
+      <DoneCounter toDos={toDos} setToDos={setToDos} toDo={toDo} />
     </>
   );
 };
