@@ -31,7 +31,9 @@ const TodoItem = ({ item, toDos, setToDos, toDo }) => {
           item.undone ? "" : "opacity-[.55]"
         } `}
       >
-        {icon}
+        <p onClick={() => taskComplete(item.name)} className=" cursor-pointer">
+          {icon}
+        </p>
         <p
           className={`cursor-pointer ${
             item.undone ? " no-underline" : " line-through"
