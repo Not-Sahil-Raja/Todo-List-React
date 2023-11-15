@@ -1,10 +1,29 @@
-[Website Link: ](https://not-sahil-raja.github.io/Todo-List-React/)
 
-# React + Vite
+# Todo List (Using React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+To practice react just made this todo list web app.
+Used React js with vite and tailwind css for styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+## Check Out The Website
+
+[Click Here](https://not-sahil-raja.github.io/Todo-List-React/) To Check The Website
+
+
+## Features
+
+- Completed/Not Completed toggle
+- Easily Add Tasks
+- Delte The Unwanted Task
+- Task Completed And Reamaining Counter
+
+
+## Preview Of The Page
+-all the features are preview here 
+
+<img src="todolist gif video.gif"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
