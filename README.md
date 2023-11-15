@@ -22,8 +22,8 @@ Used React js with vite and tailwind css for styling.
 
 
 ## Preview Of The Page
--all the features are preview here 
+all the features are preview here 
 
-<img src="todolist gif video.gif"
+<img src="preview_gif_todolist.gif"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
